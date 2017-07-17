@@ -38,6 +38,7 @@
             this.picImage.Location = new System.Drawing.Point(23, 12);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(238, 199);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 0;
             this.picImage.TabStop = false;
             // 
@@ -50,9 +51,11 @@
             this.btnPrase.Text = "解析";
             this.btnPrase.UseVisualStyleBackColor = true;
             this.btnPrase.Click += new System.EventHandler(this.btnPrase_Click);
+            this.btnPrase.DragEnter += new System.Windows.Forms.DragEventHandler(this.btnPrase_DragEnter);
             // 
             // AltasTool
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -62,6 +65,8 @@
             this.MaximizeBox = false;
             this.Name = "AltasTool";
             this.Text = "AltasTool";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.AltasTool_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.AltasTool_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.ResumeLayout(false);
 
